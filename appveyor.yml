@@ -1,6 +1,6 @@
 environment:
   global:
-    PROJECT_NAME: tag_fmt
+    PROJECT_NAME: stackie
 
   matrix:
      - GENERATOR: "Visual Studio 14"
@@ -16,4 +16,4 @@ build_script:
   - mkdir build
   - cd build
   - cmake .. -G "%GENERATOR% Win64"
-  - msbuild /m:4 /p:Configuration=%CONFIG% tag_fmt.sln
+  - cmake --build . -- -m:4 -p:Configuration=%CONFIG% stackie.sln
