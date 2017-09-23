@@ -16,4 +16,4 @@ build_script:
   - mkdir build
   - cd build
   - cmake .. -G "%GENERATOR% Win64"
-  - cmake --build . -- /m:4 /p:Configuration=%CONFIG% stackie.sln
+  - msbuild /m:4 /p:Configuration=%CONFIG% stackie.sln
